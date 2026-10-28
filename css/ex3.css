@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&family=Ultra&display=swap');
 
 body{
     padding: 0;
@@ -6,7 +6,7 @@ body{
     font-size: 1.2rem;
     color:rgba(87, 117, 144, 1);
 
-    font-family: "Roboto", sans-serif;
+    font-family: "Slabo 13px", serif;
 }
 
 ::selection{
@@ -94,6 +94,38 @@ nav a:hover{
     font-size: 150px;
     color: rgba(87, 117, 144, 1);
 }
+
+/*marquee*/
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(251, 139, 36, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 20px 0;
+}
+
+.marquee-track{
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-30%);
+    }
+}
+
+.marquee-content{
+    flex-shrink: 0;
+    padding-right: 0px;
+    white-space: nowrap;
+    font-size: max(1.5rem, 1vw); 
+}
+
 
 /*section*/
 section{
